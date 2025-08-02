@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ku" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نرخی ئاڵوگۆڕ - Exchange Rates</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="نرخی ئاڵوگۆڕی دراوەکان - نوێترین نرخی کڕین و فرۆشتنی دۆلار، یۆرۆ، پاوەند و دراوەکانی تر">
+    <meta name="keywords" content="نرخ, ئاڵوگۆڕ, دۆلار, یۆرۆ, پاوەند, دینار, exchange, rates, kurdish">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>نرخی ئاڵوگۆڕ</h1>
+            <h2>Exchange Rates</h2>
+            <div class="date" id="currentDate"></div>
+        </header>
+
+        <div class="exchange-table">
+            <div class="table-header">
+                <div class="currency-col">
+                    <span class="kurdish">دراو</span>
+                    <span class="arabic">العملة</span>
+                    <span class="english">CURRENCY</span>
+                </div>
+                <div class="buy-col">
+                    <span class="kurdish">کڕین</span>
+                    <span class="arabic">شراء</span>
+                    <span class="english">BUY</span>
+                </div>
+                <div class="sell-col">
+                    <span class="kurdish">فرۆشتن</span>
+                    <span class="arabic">بيع</span>
+                    <span class="english">SELL</span>
+                </div>
+            </div>
+
+            <div class="currency-row" data-currency="USD">
+                <div class="currency-info">
+                    <img src="flags/usd.png" alt="USD" class="flag" onerror="this.src='https://flagcdn.com/w40/us.png'">
+                    <span class="currency-name">دۆلار USD</span>
+                </div>
+                <div class="buy-rate">1,530.00</div>
+                <div class="sell-rate">1,540.00</div>
+            </div>
+
+            <div class="currency-row" data-currency="IQD">
+                <div class="currency-info">
+                    <img src="flags/iqd.png" alt="IQD" class="flag" onerror="this.src='https://flagcdn.com/w40/iq.png'">
+                    <span class="currency-name">دینار IQD</span>
+                </div>
+                <div class="buy-rate">139,250.00</div>
+                <div class="sell-rate">140,000.00</div>
+            </div>
+
+            <div class="currency-row" data-currency="EUR">
+                <div class="currency-info">
+                    <img src="flags/eur.png" alt="EUR" class="flag" onerror="this.src='https://flagcdn.com/w40/eu.png'">
+                    <span class="currency-name">یۆرۆ EUR</span>
+                </div>
+                <div class="buy-rate">113.25</div>
+                <div class="sell-rate">115.00</div>
+            </div>
+
+            <div class="currency-row" data-currency="GBP">
+                <div class="currency-info">
+                    <img src="flags/gbp.png" alt="GBP" class="flag" onerror="this.src='https://flagcdn.com/w40/gb.png'">
+                    <span class="currency-name">پاوەند GBP</span>
+                </div>
+                <div class="buy-rate">130.00</div>
+                <div class="sell-rate">131.50</div>
+            </div>
+
+            <div class="currency-row" data-currency="TRY">
+                <div class="currency-info">
+                    <img src="flags/try.png" alt="TRY" class="flag" onerror="this.src='https://flagcdn.com/w40/tr.png'">
+                    <span class="currency-name">تورکی TRY</span>
+                </div>
+                <div class="buy-rate">4,150.00</div>
+                <div class="sell-rate">3,900.00</div>
+            </div>
+
+            <div class="currency-row" data-currency="IRR">
+                <div class="currency-info">
+                    <img src="flags/irr.png" alt="IRR" class="flag" onerror="this.src='https://flagcdn.com/w40/ir.png'">
+                    <span class="currency-name">توومەن IRR</span>
+                </div>
+                <div class="buy-rate">9,500,000.00</div>
+                <div class="sell-rate">8,000,000.00</div>
+            </div>
+
+            <div class="currency-row" data-currency="NOK">
+                <div class="currency-info">
+                    <img src="flags/nok.png" alt="NOK" class="flag" onerror="this.src='https://flagcdn.com/w40/no.png'">
+                    <span class="currency-name">نەرویجی NOK</span>
+                </div>
+                <div class="buy-rate">81.00</div>
+                <div class="sell-rate">85.00</div>
+            </div>
+
+            <div class="currency-row" data-currency="SEK">
+                <div class="currency-info">
+                    <img src="flags/sek.png" alt="SEK" class="flag" onerror="this.src='https://flagcdn.com/w40/se.png'">
+                    <span class="currency-name">سویدی SEK</span>
+                </div>
+                <div class="buy-rate">88.00</div>
+                <div class="sell-rate">91.00</div>
+            </div>
+
+            <div class="currency-row" data-currency="JOD">
+                <div class="currency-info">
+                    <img src="flags/jod.png" alt="JOD" class="flag" onerror="this.src='https://flagcdn.com/w40/jo.png'">
+                    <span class="currency-name">ئوردنی JOD</span>
+                </div>
+                <div class="buy-rate">71.00</div>
+                <div class="sell-rate">68.00</div>
+            </div>
+
+            <div class="currency-row" data-currency="SAR">
+                <div class="currency-info">
+                    <img src="flags/sar.png" alt="SAR" class="flag" onerror="this.src='https://flagcdn.com/w40/sa.png'">
+                    <span class="currency-name">سعودی SAR</span>
+                </div>
+                <div class="buy-rate">385.00</div>
+                <div class="sell-rate">378.00</div>
+            </div>
+
+            <div class="currency-row" data-currency="AED">
+                <div class="currency-info">
+                    <img src="flags/aed.png" alt="AED" class="flag" onerror="this.src='https://flagcdn.com/w40/ae.png'">
+                    <span class="currency-name">ئیماراتی AED</span>
+                </div>
+                <div class="buy-rate">372.00</div>
+                <div class="sell-rate">365.00</div>
+            </div>
+
+            <div class="currency-row" data-currency="CAD">
+                <div class="currency-info">
+                    <img src="flags/cad.png" alt="CAD" class="flag" onerror="this.src='https://flagcdn.com/w40/ca.png'">
+                    <span class="currency-name">کەنەدی CAD</span>
+                </div>
+                <div class="buy-rate">70.25</div>
+                <div class="sell-rate">71.50</div>
+            </div>
+
+            <div class="currency-row" data-currency="AUD">
+                <div class="currency-info">
+                    <img src="flags/aud.png" alt="AUD" class="flag" onerror="this.src='https://flagcdn.com/w40/au.png'">
+                    <span class="currency-name">ئوستراڵی AUD</span>
+                </div>
+                <div class="buy-rate">62.00</div>
+                <div class="sell-rate">63.50</div>
+            </div>
+
+            <div class="currency-row" data-currency="CHF">
+                <div class="currency-info">
+                    <img src="flags/chf.png" alt="CHF" class="flag" onerror="this.src='https://flagcdn.com/w40/ch.png'">
+                    <span class="currency-name">سویسری CHF</span>
+                </div>
+                <div class="buy-rate">121.25</div>
+                <div class="sell-rate">122.75</div>
+            </div>
+
+            <div class="currency-row" data-currency="DKK">
+                <div class="currency-info">
+                    <img src="flags/dkk.png" alt="DKK" class="flag" onerror="this.src='https://flagcdn.com/w40/dk.png'">
+                    <span class="currency-name">دانیمارکی DKK</span>
+                </div>
+                <div class="buy-rate">131.00</div>
+                <div class="sell-rate">136.00</div>
+            </div>
+
+            <div class="currency-row" data-currency="QAR">
+                <div class="currency-info">
+                    <img src="flags/qar.png" alt="QAR" class="flag" onerror="this.src='https://flagcdn.com/w40/qa.png'">
+                    <span class="currency-name">قەتەری QAR</span>
+                </div>
+                <div class="buy-rate">385.00</div>
+                <div class="sell-rate">370.00</div>
+            </div>
+
+            <div class="currency-row" data-currency="KWD">
+                <div class="currency-info">
+                    <img src="flags/kwd.png" alt="KWD" class="flag" onerror="this.src='https://flagcdn.com/w40/kw.png'">
+                    <span class="currency-name">کوەیتی KWD</span>
+                </div>
+                <div class="buy-rate">290.00</div>
+                <div class="sell-rate">330.00</div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="contact-info">
+                <h3>پەیوەندی</h3>
+                <p>هەولێر: ڕۆناکی، تەنیشت مزگەوتی سلیمان قەساب</p>
+                <div class="phone-numbers">
+                    <span>0751 3000 120</span>
+                    <span>0751 3000 121</span>
+                    <span>0751 3000 122</span>
+                    <span>0751 3000 123</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
